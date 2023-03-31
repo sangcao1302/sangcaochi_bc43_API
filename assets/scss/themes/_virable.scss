@@ -1,0 +1,77 @@
+//Khai báo biến
+
+.abc{
+    --color:red;
+}
+
+/*------------- text ------------------*/
+$text-c0-primary: #2a73dd;
+$text-c0-dark: #000;
+$text-c1-dark:#140101;
+$text-c2-dark:#1E1D1D;
+$text-c0-light:#F6F6F6 ;
+$text-c1-light:#fff ;
+$text-c2-light:#CBC9C9;
+$text-c3-light:#FFFCFC;
+$text-c4-light:#FFF8F8;
+$text-c0-success:#1ED90E;
+$text-c0-warning:#FC0303;
+$text-c0-purple:#AE18E2;
+$fs-base: 16px;
+$fs-xl: 18px;
+$fs-2xl: 20px;
+$fs-2xl-m: 24px;
+$fs-3xl: 30px;
+$fs-4xl: 40px;
+$fs-5xl: 50px;
+$fs-6xl: 60px;
+$fs-7xl: 70px;
+$fw-extra-light : 200;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+/* ------------- background ------------- */
+$bg-c0-primary: #2a73dd;
+$bg-c1-primary: #f5f9fe;
+$bg-c0-dark: #000;
+$bg-c0-light:#fff;
+$bg-c0-linear:linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+$bg-c1-linear:linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+$bg-orange:#F8B653;
+
+
+$bg-none: transparent;
+/*----------------- mixin (hàm) ----------------*/
+@mixin text($fz,$fw,$c) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+}
+@mixin button($fz,$fw,$c,$bg,$bd,$br,$p,$c-hover,$bg-hover){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+    background: $bg;
+    border: $bd;
+    border-radius: $br;
+    padding: $p;
+    cursor: pointer;
+    &:hover {
+        color: $c-hover;
+        background: $bg-hover;        
+    }
+}
+@mixin input($bw,$bbs,$bc,$bt,$bl,$br){
+    border-width: $bw;
+    border-bottom-style:$bbs ;
+    border-color:$bc ;
+    border-top: $bt;
+    border-left: $bl;
+    border-right: $br;
+}
+
+@mixin placeholder($c){
+    placeholder:$c
+}

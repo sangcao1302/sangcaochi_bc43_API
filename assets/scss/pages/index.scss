@@ -1,0 +1,305 @@
+@import "../themes/virable";
+@import "../base/base";
+
+.header {
+  .container {
+    .row {
+      background-color: black;
+      padding: 15px;
+      .logo {
+        max-width: 100%;
+      }
+      .header-link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        i {
+          margin-right: 5%;
+          color: white;
+        }
+        a {
+          margin-right: 5%;
+          text-decoration: none;
+          @include text($fs-base, $fw-light, $text-c0-light);
+        }
+      }
+    }
+    .nav-header {
+      padding: 15px;
+      a {
+        text-decoration: none;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-right: 2%;
+        @include text($fs-2xl, $fw-normal, $text-c0-dark);
+      }
+    }
+  }
+}
+.carousel-slide {
+  .slick-prev {
+    line-height: 0;
+
+    left: 10px;
+    top: 150px;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    z-index: 1;
+    text-shadow: -1px 10px 7px rgba(205, 206, 200, 0.69);
+  }
+  .slick-next {
+    line-height: 0;
+    left: 94.7%;
+    top: 150px;
+    display: block;
+    padding: 0;
+    text-shadow: -1px 10px 7px rgba(205, 206, 200, 0.69);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+  }
+  .slick-prev:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0d9";
+    font-weight: 900;
+    font-size: 100px;
+    color: white;
+  }
+  .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+  }
+  .slick-dots li button:before {
+    font-family: "slick";
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    top: -95px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    content: "•";
+    text-align: center;
+    opacity: 0.25;
+    color: transparent;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+.carousel-background {
+  position: relative;
+  .carousel-product {
+    position: absolute;
+
+    top: 1px;
+    .row {
+      align-items: center;
+      // justify-content: space-around;
+      .img-carousel {
+        img {
+          margin-left: 20%;
+          max-width: 100%;
+        }
+      }
+      .text-carousel {
+        .text-carousel-item {
+          margin-left: 45%;
+          max-width: 100%;
+          h3 {
+            @include text($fs-4xl, $fw-light, $text-c0-dark);
+          }
+          h4 {
+            @include text($fs-2xl, $fw-light, $text-c0-dark);
+          }
+          .btn-carousel {
+            @include button(
+              $fs-2xl,
+              $fw-light,
+              $text-c1-light,
+              $bg-orange,
+              0,
+              0,
+              2%,
+              $text-c1-light,
+              $bg-orange
+            );
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product {
+  background-color: #fffcfc;
+  .container {
+    text-align: center;
+    @include text($fs-4xl, $fw-normal, $text-c0-dark);
+    .row {
+      align-items: center;
+      .product-item {
+        background-color: #f8f8f8;
+        padding: 15px;
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+        h3 {
+          @include text($fs-2xl-m, $fw-light, $text-c0-dark);
+          text-align: left;
+        }
+        h4 {
+          text-align: left;
+          @include text($fs-2xl, $fw-light, $text-c2-light);
+        }
+        .product-buy {
+          .btn-product {
+            height: 56px;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 55px;
+            vertical-align: middle;
+            @include text($fs-2xl-m, $fw-extra-light, $text-c0-dark);
+            @include button(
+              $fs-2xl,
+              $fw-light,
+              $text-c1-light,
+              $bg-orange,
+              0,
+              0,
+              0,
+              $text-c1-light,
+              $bg-orange
+            );
+          }
+          p {
+            display: flex;
+            justify-content: flex-end;
+            @include text($fs-2xl-m, $fw-semibold, $text-c0-dark);
+            background-color: #dedddc;
+            padding: 10px;
+            margin-top: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  .container {
+    .row {
+      .img-footer {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .product .container .row .product-item .product-buy p {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    background-color: #dedddc;
+    padding: 10px;
+    margin-top: 22px;
+  }
+  .carousel-background
+    .carousel-product
+    .row
+    .text-carousel
+    .text-carousel-item {
+    margin-left: 20%;
+  }
+  .carousel-background
+    .carousel-product
+    .row
+    .text-carousel
+    .text-carousel-item
+    h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+  }
+  .carousel-background
+    .carousel-product
+    .row
+    .text-carousel
+    .text-carousel-item
+    h4 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+  }
+  .carousel-slide .slick-prev::before {
+    display: none;
+  }
+  .carousel-slide .slick-next::before {
+    display: none;
+  }
+}
+// @media only screen and (max-width:576px) {
+//   // .text-carousel {
+//   //   .text-carousel-item {
+//   //     margin-left: 20%;
+//   //     max-width: 100%;
+//   //     h3 {
+//   //       @include text($fs-2xl, $fw-light, $text-c0-dark);
+//   //       display: none
+//   //     }
+//   //     h4 {
+//   //       @include text($fs-xl, $fw-light, $text-c0-dark);
+//   //     }
+//   //     .btn-carousel {
+//   //       @include button(
+//   //         $fs-xl,
+//   //         $fw-light,
+//   //         $text-c1-light,
+//   //         $bg-orange,
+//   //         0,
+//   //         0,
+//   //         2%,
+//   //         $text-c1-light,
+//   //         $bg-orange
+//   //       );
+//   //       width: 150px;
+//   //     }
+//   //   }
+//   // }
+
+// }
+@media only screen and (max-width: 280px) {
+  .logo {
+    max-width: 100%;
+    img {
+      width: 105%;
+    }
+  }
+  .header .container .nav-header a {
+    text-decoration: none;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 3px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+  }
+}
